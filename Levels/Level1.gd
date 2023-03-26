@@ -7,3 +7,5 @@ func _ready():
 			$YSort/MainPlayer.position.x = 376
 			$YSort/MainPlayer.position.y = 2008
 
+func test():
+	print("works")

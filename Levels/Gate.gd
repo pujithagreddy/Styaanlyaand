@@ -7,7 +7,7 @@ onready var Global = get_node("/root/Global")
 func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		if get_overlapping_bodies().size() > 1:
-			next_level()
+				next_level()
 			
 func next_level():
 	var PTS = get_tree().change_scene(new_scene)

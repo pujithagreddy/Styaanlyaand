@@ -4,13 +4,91 @@
 			"character": "character-1672426307.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Uncle, I'm a 4th year"
+			"text": "Hi Uncle, can I leave?"
+		},
+		{
+			"character": "character-1672426258.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Do you have your mentor permission slip?"
+		},
+		{
+			"choice": "Yes",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
 		},
 		{
 			"character": "character-1672426258.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "JAAKE MENTOR PERMISSION LEKEY AAO"
+			"text": "Ok, you can go, be safe!"
+		},
+		{
+			"choice": "No",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1672426258.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Please go to your mentor and get permission to leave"
+		},
+		{
+			"character": "character-1675947144.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Do you know where to find your mentor"
+		},
+		{
+			"choice": "Yes",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "perm",
+				"target_node_path": "Gate"
+			},
+			"event_id": "dialogic_042"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		},
+		{
+			"choice": "No",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1672426258.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "You can find her at..."
+		},
+		{
+			"event_id": "dialogic_013"
+		},
+		{
+			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_022",
@@ -20,6 +98,6 @@
 	"metadata": {
 		"dialogic-version": "1.4.5",
 		"file": "timeline-1672426292.json",
-		"name": "timeline-1"
+		"name": "watchman"
 	}
 }

@@ -63,7 +63,7 @@
 
 				],
 				"method_name": "perm",
-				"target_node_path": "Gate"
+				"target_node_path": "Node2D/leaveGate/"
 			},
 			"event_id": "dialogic_042"
 		},

@@ -25,6 +25,7 @@ func _input(event):
 func perm():
 	permission=1
 	print(permission)
+	print("works")
 
 func next_level():
 	var PTS = get_tree().change_scene(new_scene)

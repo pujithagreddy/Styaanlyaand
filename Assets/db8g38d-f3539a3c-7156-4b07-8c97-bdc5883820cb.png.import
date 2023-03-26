@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/school_tileb 1.png-eb67cd35119b49dc092e5db89c30be39.stex"
+path="res://.import/db8g38d-f3539a3c-7156-4b07-8c97-bdc5883820cb.png-026989ba548fcf041a9f3da2d9e7aeeb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/school_tileb 1.png"
-dest_files=[ "res://.import/school_tileb 1.png-eb67cd35119b49dc092e5db89c30be39.stex" ]
+source_file="res://Assets/db8g38d-f3539a3c-7156-4b07-8c97-bdc5883820cb.png"
+dest_files=[ "res://.import/db8g38d-f3539a3c-7156-4b07-8c97-bdc5883820cb.png-026989ba548fcf041a9f3da2d9e7aeeb.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

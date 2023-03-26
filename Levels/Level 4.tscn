@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://Levels/Gate.gd" type="Script" id=1]
 [ext_resource path="res://Stuff/Plant2.tscn" type="PackedScene" id=2]
@@ -1938,6 +1938,9 @@ extents = Vector2( 81.75, 122.25 )
 [sub_resource type="CapsuleShape2D" id=119]
 height = 9.59998
 
+[sub_resource type="RectangleShape2D" id=120]
+extents = Vector2( 155, 76.5 )
+
 [node name="l1" type="Node2D"]
 
 [node name="Ground 1" type="TileMap" parent="."]
@@ -2364,3 +2367,11 @@ frame = 27
 position = Vector2( -179, 1356 )
 scale = Vector2( 2.5, 2.5 )
 shape = SubResource( 119 )
+
+[node name="into E-Block" type="Area2D" parent="."]
+script = ExtResource( 1 )
+new_scene = "res://Levels/Level 9.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="into E-Block"]
+position = Vector2( 1792, 546 )
+shape = SubResource( 120 )

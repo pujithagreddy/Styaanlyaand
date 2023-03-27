@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Levels/Gate.gd" type="Script" id=1]
 [ext_resource path="res://Assets/house.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Assets/all tiles 2.png" type="Texture" id=7]
 [ext_resource path="res://Assets/auto and scooty.png" type="Texture" id=8]
 [ext_resource path="res://Music/Patreon Goal Reward Loops - Track 05.wav" type="AudioStream" id=9]
+[ext_resource path="res://Music/Concrete 2.wav" type="AudioStream" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 0, 0, 14.84, 0.0300064, 15.02, 31.6763, 0, 31.8563, 0, 0 )
@@ -464,12 +465,13 @@ scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 
 [node name="Vehicles" type="TileMap" parent="."]
-position = Vector2( 0, -40 )
-scale = Vector2( 3, 3 )
+position = Vector2( -74, 20 )
+scale = Vector2( 5, 5 )
 tile_set = SubResource( 25 )
-cell_size = Vector2( 32, 32 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
 format = 1
-tile_data = PoolIntArray( 262143, 0, 0, 196608, 1073741826, 0, 196609, 1, 0, 196610, 1073741827, 0, 196611, 2, 0, 196612, 1073741824, 0, 196613, 3, 0, 196614, 1073741825, 0, 196615, 0, 0, 196616, 1073741826, 0, 196617, 1, 0, 196618, 1073741827, 0 )
+tile_data = PoolIntArray( 262143, 0, 0, 196608, 1073741826, 0, 196609, 1, 0, 196610, 1073741827, 0, 196611, 2, 0, 196612, 1073741824, 0, 196613, 3, 0, 196614, 1073741825, 0, 196615, 0, 0, 196616, 1073741826, 0, 196617, 1, 0, 196618, 1073741827, 0, 196620, 536870912, 0, 458754, -2147483648, 0, 524290, -2147483646, 0 )
 
 [node name="Rekulu" type="TileMap" parent="."]
 scale = Vector2( 1.5, 1.5 )
@@ -481,6 +483,14 @@ tile_data = PoolIntArray( 589855, 3, 0, 589856, 2, 0, 589857, 2, 0, 589858, 2, 0
 [node name="MainPlayer" parent="." instance=ExtResource( 3 )]
 position = Vector2( 256, 1257 )
 scale = Vector2( 1.2, 1.2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainPlayer"]
+stream = ExtResource( 10 )
+volume_db = -13.109
+pitch_scale = 0.16
+
+[node name="Timer" type="Timer" parent="MainPlayer"]
+one_shot = true
 
 [node name="to the parking" type="Area2D" parent="."]
 script = ExtResource( 1 )

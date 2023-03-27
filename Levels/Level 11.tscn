@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/Inside_A4.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Inside_B.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Characters/MainPlayer.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Levels/Gate.gd" type="Script" id=11]
 [ext_resource path="res://Music/college sound .wav" type="AudioStream" id=12]
+[ext_resource path="res://Music/Concrete 2.wav" type="AudioStream" id=13]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1597,6 +1598,14 @@ tile_data = PoolIntArray( 5, 0, 0, 65541, 0, 0, 131077, 0, 0, 131082, 0, 0, 1966
 
 [node name="MainPlayer" parent="." instance=ExtResource( 10 )]
 position = Vector2( 661, 840 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainPlayer"]
+stream = ExtResource( 13 )
+volume_db = -13.109
+pitch_scale = 0.16
+
+[node name="Timer" type="Timer" parent="MainPlayer"]
+one_shot = true
 
 [node name="to corridor" type="Area2D" parent="."]
 script = ExtResource( 11 )

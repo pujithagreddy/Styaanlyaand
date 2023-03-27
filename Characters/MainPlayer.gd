@@ -18,3 +18,7 @@ func _physics_process(_delta):
 		move_and_slide(input_vector * speed)
 		$AnimationTree.set("parameters/Idle/blend_position", input_vector)
 		$AnimationTree.set("parameters/Walk/blend_position", input_vector)
+		if $Timer.time_left<=0:
+			$AudioStreamPlayer.pitch_scale= rand_range(0.8, 1.2)
+			$AudioStreamPlayer.play()
+			$Timer.start(0.408)

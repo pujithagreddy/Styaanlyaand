@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=2]
+[gd_scene load_steps=88 format=2]
 
 [ext_resource path="res://Levels/Gate.gd" type="Script" id=1]
 [ext_resource path="res://Stuff/Plant2.tscn" type="PackedScene" id=2]
@@ -27,6 +27,7 @@
 [ext_resource path="res://Assets/potted plants.png" type="Texture" id=25]
 [ext_resource path="res://Assets/cars/cars.png" type="Texture" id=26]
 [ext_resource path="res://Assets/shadows.png" type="Texture" id=27]
+[ext_resource path="res://Music/Concrete 2.wav" type="AudioStream" id=28]
 [ext_resource path="res://Levels/watchman.gd" type="Script" id=29]
 [ext_resource path="res://Assets/watchman.png" type="Texture" id=30]
 [ext_resource path="res://Assets/object or char shadow.png" type="Texture" id=31]
@@ -2284,6 +2285,14 @@ scale = Vector2( 2, 2 )
 [node name="MainPlayer" parent="YSort" instance=ExtResource( 5 )]
 position = Vector2( 646, 105 )
 scale = Vector2( 1.2, 1.2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="YSort/MainPlayer"]
+stream = ExtResource( 28 )
+volume_db = -13.109
+pitch_scale = 0.16
+
+[node name="Timer" type="Timer" parent="YSort/MainPlayer"]
+one_shot = true
 
 [node name="Chair" parent="YSort" instance=ExtResource( 11 )]
 position = Vector2( -232, 1488 )

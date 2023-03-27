@@ -7,5 +7,7 @@ func _ready():
 			$YSort/MainPlayer.position.x = 376
 			$YSort/MainPlayer.position.y = 2008
 
-func test():
-	print("works")
+
+func _process(delta):
+	if $"CanvasLayer/black".modulate.a>=0:
+		$"CanvasLayer/black".modulate.a-= 1.5*delta

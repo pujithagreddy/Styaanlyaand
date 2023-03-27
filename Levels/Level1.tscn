@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=2]
+[gd_scene load_steps=109 format=2]
 
 [ext_resource path="res://Assets/all tiles 2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/shadows.png" type="Texture" id=2]
@@ -27,10 +27,17 @@
 [ext_resource path="res://Levels/Level1.gd" type="Script" id=25]
 [ext_resource path="res://Assets/a block stairs.png" type="Texture" id=26]
 [ext_resource path="res://Music/VGMA Challenge - July 1st.wav" type="AudioStream" id=27]
+[ext_resource path="res://icon.png" type="Texture" id=28]
+[ext_resource path="res://Music/Concrete 2.wav" type="AudioStream" id=29]
+[ext_resource path="res://Assets/pigeon_pecking.png" type="Texture" id=30]
 [ext_resource path="res://Assets/rekulu and triangle shadow.png" type="Texture" id=31]
+[ext_resource path="res://Assets/cat walkcycle (1).png" type="Texture" id=32]
 [ext_resource path="res://Assets/cars/cars.png" type="Texture" id=33]
 [ext_resource path="res://Assets/e block (1) (1).png" type="Texture" id=34]
+[ext_resource path="res://Assets/pigeon_walking.png" type="Texture" id=35]
+[ext_resource path="res://Music/birdsongs-31931.mp3" type="AudioStream" id=36]
 [ext_resource path="res://Assets/auto and scooty.png" type="Texture" id=37]
+[ext_resource path="res://Music/city-traffic-outdoor-6414.mp3" type="AudioStream" id=38]
 
 [sub_resource type="TileSet" id=1]
 0/name = "all tiles 2.png 0"
@@ -1942,35 +1949,73 @@ extents = Vector2( 155, 76.5 )
 [sub_resource type="RectangleShape2D" id=156]
 extents = Vector2( 144, 48.5 )
 
-[sub_resource type="Animation" id=157]
-resource_name = "Fade out"
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0.823529 ), Color( 0, 0, 0, 0.686275 ), Color( 0, 0, 0, 0.588235 ), Color( 0, 0, 0, 0.490196 ), Color( 0, 0, 0, 0.392157 ), Color( 0, 0, 0, 0.294118 ), Color( 0, 0, 0, 0.196078 ), Color( 0, 0, 0, 0.0980392 ), Color( 0, 0, 0, 0.0392157 ), Color( 0, 0, 0, 0 ) ]
-}
+[sub_resource type="AtlasTexture" id=157]
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 48, 32 )
 
-[sub_resource type="Animation" id=158]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 1 ) ]
-}
+[sub_resource type="AtlasTexture" id=158]
+atlas = ExtResource( 30 )
+region = Rect2( 48, 0, 48, 32 )
+
+[sub_resource type="AtlasTexture" id=159]
+atlas = ExtResource( 30 )
+region = Rect2( 96, 0, 48, 32 )
+
+[sub_resource type="AtlasTexture" id=160]
+atlas = ExtResource( 30 )
+region = Rect2( 144, 0, 48, 32 )
+
+[sub_resource type="SpriteFrames" id=161]
+animations = [ {
+"frames": [ SubResource( 157 ), SubResource( 158 ), SubResource( 159 ), SubResource( 160 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=162]
+atlas = ExtResource( 32 )
+region = Rect2( 0, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=163]
+atlas = ExtResource( 32 )
+region = Rect2( 96, 0, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=164]
+atlas = ExtResource( 32 )
+region = Rect2( 192, 0, 96, 96 )
+
+[sub_resource type="SpriteFrames" id=165]
+animations = [ {
+"frames": [ SubResource( 162 ), SubResource( 163 ), SubResource( 164 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.51
+} ]
+
+[sub_resource type="AtlasTexture" id=166]
+atlas = ExtResource( 32 )
+region = Rect2( 0, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=167]
+atlas = ExtResource( 32 )
+region = Rect2( 96, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=168]
+atlas = ExtResource( 32 )
+region = Rect2( 192, 192, 96, 96 )
+
+[sub_resource type="AtlasTexture" id=169]
+atlas = ExtResource( 32 )
+region = Rect2( 288, 192, 96, 96 )
+
+[sub_resource type="SpriteFrames" id=170]
+animations = [ {
+"frames": [ SubResource( 166 ), SubResource( 167 ), SubResource( 168 ), SubResource( 169 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 25 )
@@ -2317,6 +2362,14 @@ scale = Vector2( 2, 2 )
 position = Vector2( 376, 1880 )
 scale = Vector2( 1.2, 1.2 )
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="YSort/MainPlayer"]
+stream = ExtResource( 29 )
+volume_db = -13.109
+pitch_scale = 0.16
+
+[node name="Timer" type="Timer" parent="YSort/MainPlayer"]
+one_shot = true
+
 [node name="Chair" parent="YSort" instance=ExtResource( 19 )]
 position = Vector2( -227, 1489 )
 scale = Vector2( 2, 2 )
@@ -2405,27 +2458,56 @@ position = Vector2( 200, 1664 )
 shape = SubResource( 156 )
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 27 )
+stream = ExtResource( 36 )
+volume_db = 11.505
 autoplay = true
-
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-margin_left = -2478.0
-margin_top = -385.0
-margin_right = 3864.0
-margin_bottom = 1800.0
-color = Color( 0, 0, 0, 1 )
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect"]
-"anims/Fade out" = SubResource( 157 )
-anims/RESET = SubResource( 158 )
 
 [node name="BGM2" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 2548, 903 )
-stream = ExtResource( 27 )
+stream = ExtResource( 38 )
+volume_db = 12.035
 autoplay = true
 
 [node name="BGM3" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( -1201, 699 )
 stream = ExtResource( 27 )
+volume_db = -80.0
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="black" type="Sprite" parent="CanvasLayer"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 173, 1396 )
+scale = Vector2( 135.023, -77.3674 )
+texture = ExtResource( 28 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 610, 1391 )
+scale = Vector2( 1.229, 1.229 )
+frames = SubResource( 161 )
+frame = 1
+speed_scale = 0.6
+playing = true
+
+[node name="PigeonWalking" type="Sprite" parent="."]
+position = Vector2( 2187, 1290 )
+scale = Vector2( 1.229, 1.229 )
+texture = ExtResource( 35 )
+flip_h = true
+hframes = 24
+frame = 1
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 2221, 771 )
+scale = Vector2( 0.677083, 0.677084 )
+frames = SubResource( 165 )
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="."]
+modulate = Color( 0.952941, 0.705882, 0.52549, 1 )
+position = Vector2( 598, -85 )
+scale = Vector2( 0.67, 0.67 )
+frames = SubResource( 170 )
+frame = 3
+playing = true

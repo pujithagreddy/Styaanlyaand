@@ -32,3 +32,7 @@ func _on_Start_focus_entered():
 
 func _on_Quit_focus_entered():
 	$VBoxContainer/SE.play()
+	
+func _process(delta):
+	if $"CanvasLayer/black".modulate.a>=0:
+		$"CanvasLayer/black".modulate.a-= 1.0*delta

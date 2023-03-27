@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Assets/Inside_A4.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Inside_B.png" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Assets/all tiles 2.png" type="Texture" id=13]
 [ext_resource path="res://Characters/MainPlayer.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Music/college sound .wav" type="AudioStream" id=15]
+[ext_resource path="res://Music/Concrete 2.wav" type="AudioStream" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=10]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -917,6 +918,14 @@ tile_data = PoolIntArray( -720895, 15, 0, -655359, 15, 0, -589823, 15, 0, -52428
 
 [node name="MainPlayer" parent="." instance=ExtResource( 14 )]
 position = Vector2( 1173, 468 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainPlayer"]
+stream = ExtResource( 16 )
+volume_db = -13.109
+pitch_scale = 0.16
+
+[node name="Timer" type="Timer" parent="MainPlayer"]
+one_shot = true
 
 [node name="Overlay2" type="TileMap" parent="."]
 position = Vector2( -9, -11 )

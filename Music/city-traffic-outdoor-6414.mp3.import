@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/city-traffic-outdoor-6414.mp3-392cd1066d8c7e36b89abe649068c095.mp3str"
+
+[deps]
+
+source_file="res://Music/city-traffic-outdoor-6414.mp3"
+dest_files=[ "res://.import/city-traffic-outdoor-6414.mp3-392cd1066d8c7e36b89abe649068c095.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

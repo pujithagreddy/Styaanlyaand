@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Levels/Gate.gd" type="Script" id=1]
 [ext_resource path="res://Assets/house.png" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Assets/rekulu and triangle shadow.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Outside_A5.png" type="Texture" id=6]
 [ext_resource path="res://Assets/all tiles 2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/auto and scooty.png" type="Texture" id=8]
+[ext_resource path="res://Music/Patreon Goal Reward Loops - Track 05.wav" type="AudioStream" id=9]
 
 [sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 0, 0, 14.84, 0.0300064, 15.02, 31.6763, 0, 31.8563, 0, 0 )
@@ -266,6 +268,64 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 8.95523, 8.792, 8.56643, 8.9216, 32,
 } ]
 13/z_index = 0
 
+[sub_resource type="TileSet" id=25]
+0/name = "auto and scooty.png 0"
+0/texture = ExtResource( 8 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "auto and scooty.png 1"
+1/texture = ExtResource( 8 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 32, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "auto and scooty.png 2"
+2/texture = ExtResource( 8 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 32, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "auto and scooty.png 3"
+3/texture = ExtResource( 8 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 32, 32, 32, 32 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
 [sub_resource type="ConvexPolygonShape2D" id=21]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
@@ -403,6 +463,14 @@ position = Vector2( 818.667, 63.3333 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 2 )
 
+[node name="Vehicles" type="TileMap" parent="."]
+position = Vector2( 0, -40 )
+scale = Vector2( 3, 3 )
+tile_set = SubResource( 25 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 262143, 0, 0, 196608, 1073741826, 0, 196609, 1, 0, 196610, 1073741827, 0, 196611, 2, 0, 196612, 1073741824, 0, 196613, 3, 0, 196614, 1073741825, 0, 196615, 0, 0, 196616, 1073741826, 0, 196617, 1, 0, 196618, 1073741827, 0 )
+
 [node name="Rekulu" type="TileMap" parent="."]
 scale = Vector2( 1.5, 1.5 )
 tile_set = SubResource( 2 )
@@ -429,3 +497,7 @@ new_scene = "res://Levels/Level 6.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="towards canteen"]
 position = Vector2( 1409, 973 )
 shape = SubResource( 14 )
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 9 )
+autoplay = true

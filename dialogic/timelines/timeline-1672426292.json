@@ -4,7 +4,7 @@
 			"character": "character-1672426307.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hi Uncle, can I leave?"
+			"text": "Hi Uncle, how're you?"
 		},
 		{
 			"character": "character-1672426258.json",
@@ -13,10 +13,10 @@
 
 			],
 			"portrait": "",
-			"question": "Do you have your mentor permission slip?"
+			"question": "I'm doing good. And how about you?"
 		},
 		{
-			"choice": "Yes",
+			"choice": "I'm doing fine too.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -26,10 +26,10 @@
 			"character": "character-1672426258.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Ok, you can go, be safe!"
+			"text": ":)"
 		},
 		{
-			"choice": "No",
+			"choice": "Feeling blue today.",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",
@@ -39,53 +39,11 @@
 			"character": "character-1672426258.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Please go to your mentor and get permission to leave"
-		},
-		{
-			"character": "character-1675947144.json",
-			"event_id": "dialogic_010",
-			"options": [
-
-			],
-			"portrait": "",
-			"question": "Do you know where to find your mentor"
-		},
-		{
-			"choice": "Yes",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"call_node": {
-				"arguments": [
-
-				],
-				"method_name": "perm",
-				"target_node_path": "Node2D/leaveGate/"
-			},
-			"event_id": "dialogic_042"
+			"text": "Hope you cheer up soon!"
 		},
 		{
 			"event_id": "dialogic_022",
 			"transition_duration": 1
-		},
-		{
-			"choice": "No",
-			"condition": "",
-			"definition": "",
-			"event_id": "dialogic_011",
-			"value": ""
-		},
-		{
-			"character": "character-1672426258.json",
-			"event_id": "dialogic_001",
-			"portrait": "",
-			"text": "You can find her at..."
-		},
-		{
-			"event_id": "dialogic_013"
 		},
 		{
 			"event_id": "dialogic_013"

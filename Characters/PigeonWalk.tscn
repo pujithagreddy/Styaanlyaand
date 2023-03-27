@@ -53,6 +53,5 @@ position = Vector2( 2, 4 )
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "PigeonWalk"
 anims/PigeonWalk = SubResource( 2 )
 anims/RESET = SubResource( 3 )

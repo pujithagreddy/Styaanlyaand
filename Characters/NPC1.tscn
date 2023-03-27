@@ -194,7 +194,7 @@ vframes = 5
 frame = 18
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "NPC_Expression"
+autoplay = "NPC_IdleFront"
 anims/NPC_Expression = SubResource( 2 )
 anims/NPC_IdleBack = SubResource( 3 )
 anims/NPC_IdleFront = SubResource( 4 )

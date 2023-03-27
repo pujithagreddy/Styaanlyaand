@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://Levels/Gate.gd" type="Script" id=1]
 [ext_resource path="res://Characters/MainPlayer.tscn" type="PackedScene" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://Assets/Group 18.png" type="Texture" id=11]
 [ext_resource path="res://Assets/s2.png" type="Texture" id=12]
 [ext_resource path="res://Assets/Inside_B.png" type="Texture" id=13]
+[ext_resource path="res://Music/Ludum Dare 28 - Track 2.wav" type="AudioStream" id=14]
+[ext_resource path="res://Music/college sound .wav" type="AudioStream" id=15]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1665,3 +1667,14 @@ new_scene = "res://Levels/Level 7.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="towards parkinng"]
 position = Vector2( 36, 611.25 )
 shape = SubResource( 45 )
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 14 )
+autoplay = true
+
+[node name="college sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1009, 424 )
+stream = ExtResource( 15 )
+volume_db = 9.203
+autoplay = true
+attenuation = 0.450625

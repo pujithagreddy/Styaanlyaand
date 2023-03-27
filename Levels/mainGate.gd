@@ -3,7 +3,7 @@ extends Area2D
 export(String, FILE, "*.tscn,*.scn") var new_scene 
 
 var permission=0
-#var active=false
+var active=false
 onready var Global = get_node("/root/Global")
 
 func _input(event):
@@ -11,7 +11,6 @@ func _input(event):
 		if get_overlapping_bodies().size() > 1:
 			if permission==0:
 				if get_node_or_null('DialogNode')==null:
-					if event.is_action_pressed("ui_accept"):
 						get_tree().paused=true
 						var dialog= Dialogic.start('permission0')
 						dialog.pause_mode=Node.PAUSE_MODE_PROCESS

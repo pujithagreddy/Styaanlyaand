@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export(float) var speed = 200.0
 
+
 #top-down movements
 func _physics_process(_delta):
 	var input_vector = Vector2.ZERO
@@ -22,3 +23,5 @@ func _physics_process(_delta):
 			$AudioStreamPlayer.pitch_scale= rand_range(0.8, 1.2)
 			$AudioStreamPlayer.play()
 			$Timer.start(0.408)
+
+		

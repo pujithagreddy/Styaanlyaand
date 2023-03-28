@@ -4,7 +4,7 @@
 			"character": "character-1672426307.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hi Uncle, how're you?"
+			"text": "Good morning Uncle"
 		},
 		{
 			"character": "character-1672426258.json",
@@ -13,10 +13,10 @@
 
 			],
 			"portrait": "",
-			"question": "I'm doing good. And how about you?"
+			"question": "Good morning beta, kaisa hai aap?"
 		},
 		{
-			"choice": "I'm doing fine too.",
+			"choice": "I'm doing great!",
 			"condition": "",
 			"definition": "",
 			"event_id": "dialogic_011",

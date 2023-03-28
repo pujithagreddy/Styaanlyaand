@@ -4,7 +4,11 @@
 			"character": "",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hi, why dont u look around"
+			"text": "Hi, Welcome to your first day at Stanley, why dont you look around. Good Luck!"
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
 		}
 	],
 	"metadata": {

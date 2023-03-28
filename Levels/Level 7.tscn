@@ -16,7 +16,6 @@
 [ext_resource path="res://Assets/e block (1) (1).png" type="Texture" id=14]
 [ext_resource path="res://Assets/potted plants shadow + pillar shadow.png" type="Texture" id=15]
 [ext_resource path="res://Assets/auto and scooty.png" type="Texture" id=16]
-[ext_resource path="res://Music/VGMA Challenge - July 1st.wav" type="AudioStream" id=17]
 [ext_resource path="res://Assets/rekulu and triangle shadow.png" type="Texture" id=18]
 [ext_resource path="res://Assets/benchs.png" type="Texture" id=19]
 [ext_resource path="res://Assets/D block.png" type="Texture" id=20]
@@ -31,6 +30,7 @@
 [ext_resource path="res://Levels/watchman.gd" type="Script" id=29]
 [ext_resource path="res://Assets/watchman.png" type="Texture" id=30]
 [ext_resource path="res://Assets/object or char shadow.png" type="Texture" id=31]
+[ext_resource path="res://Music/out.mp3" type="AudioStream" id=32]
 
 [sub_resource type="TileSet" id=109]
 0/name = "all tiles 2.png 0"
@@ -2383,15 +2383,15 @@ shape = SubResource( 120 )
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 438, 877 )
-stream = ExtResource( 17 )
+stream = ExtResource( 32 )
 autoplay = true
 
 [node name="BGM2" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 2548, 903 )
-stream = ExtResource( 17 )
+stream = ExtResource( 32 )
 autoplay = true
 
 [node name="BGM3" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( -1201, 699 )
-stream = ExtResource( 17 )
+stream = ExtResource( 32 )
 autoplay = true

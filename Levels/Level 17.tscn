@@ -1817,36 +1817,6 @@ points = PoolVector2Array( 30.0096, 45.5141, 28.879, 53.5894, 22.7418, 61.0186, 
 16/shapes = [  ]
 16/z_index = 0
 
-[sub_resource type="TileSet" id=114]
-0/name = "trees near d and b block.png 0"
-0/texture = ExtResource( 3 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 288, 0, 288, 416 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-1/name = "trees near d and b block.png 1"
-1/texture = ExtResource( 3 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 0, 0, 224, 384 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-
 [sub_resource type="ConvexPolygonShape2D" id=108]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
@@ -2785,6 +2755,36 @@ animations = [ {
 "speed": 2.0
 } ]
 
+[sub_resource type="TileSet" id=114]
+0/name = "trees near d and b block.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 288, 0, 288, 416 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "trees near d and b block.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 224, 384 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
 [node name="Level 17" type="Node2D"]
 
 [node name="Ground 1" type="TileMap" parent="."]
@@ -3155,13 +3155,6 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -262094, 16, 0, -196558, 16, 0, -131022, 16, 0, -65486, 16, 0, 50, 16, 0, 65586, 16, 0, 131122, 16, 0, 196658, 16, 0, 262194, 16, 0, 327730, 16, 0, 393266, 16, 0, 458802, 16, 0, 524338, 16, 0, 589874, 16, 0, 655410, 16, 0, 720946, 16, 0, 786482, 16, 0, 852018, 16, 0, 917554, 16, 0, 983090, 16, 0, 1048626, 16, 0, 1114162, 16, 0, 1179698, 16, 0, 1310685, -1610612721, 0, 1310686, -1610612721, 0, 1310687, -1610612721, 0, 1310688, -1610612721, 0, 1310689, -1610612721, 0, 1310690, -1610612721, 0, 1310691, -1610612721, 0, 1310692, -1610612721, 0, 1310693, -1610612721, 0, 1310694, -1610612721, 0, 1310695, -1610612721, 0, 1310696, -1610612721, 0, 1310697, -1610612721, 0, 1310698, -1610612721, 0, 1310699, -1610612721, 0, 1310700, -1610612721, 0, 1310701, -1610612721, 0, 1310702, -1610612721, 0, 1310703, -1610612721, 0, 1310704, -1610612721, 0, 1310705, -1610612721, 0, 1310706, -1610612721, 0, 1310707, -1610612721, 0, 1310708, -1610612721, 0, 1310709, -1610612721, 0, 1310710, -1610612721, 0, 1310711, -1610612721, 0, 1310712, -1610612721, 0, 1310713, -1610612721, 0, 1310714, -1610612721, 0, 1245234, 16, 0 )
 
-[node name="trees" type="TileMap" parent="."]
-scale = Vector2( 2, 2 )
-tile_set = SubResource( 114 )
-cell_size = Vector2( 32, 32 )
-format = 1
-tile_data = PoolIntArray( -327718, 1, 0, -327714, 0, 0, 327643, 0, 0, 262190, 536870913, 0, 393185, 0, 0, 917467, 1, 0 )
-
 [node name="TileMap6" type="TileMap" parent="."]
 position = Vector2( 1816, 232 )
 scale = Vector2( 1.8, 1.8 )
@@ -3281,7 +3274,6 @@ shape = SubResource( 207 )
 position = Vector2( -180, 1361 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 208 )
-frame = 1
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -3304,6 +3296,7 @@ frame = 1
 position = Vector2( 2221, 771 )
 scale = Vector2( 0.677083, 0.677084 )
 frames = SubResource( 245 )
+frame = 2
 playing = true
 
 [node name="cat back" type="AnimatedSprite" parent="."]
@@ -3351,6 +3344,7 @@ shape = SubResource( 207 )
 position = Vector2( -181, 1363 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 243 )
+frame = 1
 playing = true
 
 [node name="npc3" type="Area2D" parent="."]
@@ -3388,3 +3382,10 @@ __meta__ = {
 position = Vector2( -181, 1379 )
 scale = Vector2( 2.5, 2.5 )
 shape = SubResource( 207 )
+
+[node name="trees" type="TileMap" parent="."]
+scale = Vector2( 2, 2 )
+tile_set = SubResource( 114 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -327718, 1, 0, -327714, 0, 0, 327643, 0, 0, 262190, 536870913, 0, 393185, 0, 0, 917467, 1, 0 )

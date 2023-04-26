@@ -1,10 +1,10 @@
 {
 	"events": [
 		{
-			"character": "",
+			"character": "character-1682501617.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Hi, Welcome to your first day at Stanley, why dont you look around. Good Luck!"
+			"text": "Hi, Welcome to your first day at Stanley, why dont you look around? Good Luck!"
 		},
 		{
 			"event_id": "dialogic_022",

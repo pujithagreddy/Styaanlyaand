@@ -1,4 +1,4 @@
-[gd_scene load_steps=158 format=2]
+[gd_scene load_steps=160 format=2]
 
 [ext_resource path="res://Levels/Gate.gd" type="Script" id=1]
 [ext_resource path="res://Stuff/Plant2.tscn" type="PackedScene" id=2]
@@ -49,6 +49,7 @@
 [ext_resource path="res://Assets/teacher2.png" type="Texture" id=47]
 [ext_resource path="res://Assets/npc 4.png" type="Texture" id=48]
 [ext_resource path="res://Assets/npc 2.png" type="Texture" id=49]
+[ext_resource path="res://Levels/cat area.gd" type="Script" id=50]
 
 [sub_resource type="TileSet" id=109]
 0/name = "all tiles 2.png 0"
@@ -2786,6 +2787,9 @@ animations = [ {
 1/shapes = [  ]
 1/z_index = 0
 
+[sub_resource type="CapsuleShape2D" id=252]
+radius = 45.0
+
 [node name="l1" type="Node2D"]
 
 [node name="Ground 1" type="TileMap" parent="."]
@@ -3271,6 +3275,7 @@ playing = true
 position = Vector2( 610, 1391 )
 scale = Vector2( 1.229, 1.229 )
 frames = SubResource( 240 )
+frame = 1
 speed_scale = 0.6
 playing = true
 
@@ -3286,7 +3291,6 @@ frame = 1
 position = Vector2( 2221, 771 )
 scale = Vector2( 0.677083, 0.677084 )
 frames = SubResource( 241 )
-frame = 1
 playing = true
 
 [node name="cat back" type="AnimatedSprite" parent="."]
@@ -3294,14 +3298,14 @@ modulate = Color( 0.952941, 0.705882, 0.52549, 1 )
 position = Vector2( 598, -85 )
 scale = Vector2( 0.67, 0.67 )
 frames = SubResource( 242 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="."]
 position = Vector2( 1197, 385 )
 scale = Vector2( 1.229, 1.229 )
 frames = SubResource( 240 )
-frame = 1
+frame = 2
 speed_scale = 0.6
 playing = true
 flip_h = true
@@ -3379,3 +3383,17 @@ tile_set = SubResource( 114 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -327718, 1, 0, -327714, 0, 0, 327643, 0, 0, 262190, 536870913, 0, 393185, 0, 0, 917467, 1, 0 )
+
+[node name="cat area" type="Area2D" parent="."]
+script = ExtResource( 50 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cat area"]
+position = Vector2( 584, -79 )
+shape = SubResource( 252 )
+
+[node name="cat area2" type="Area2D" parent="."]
+script = ExtResource( 50 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cat area2"]
+position = Vector2( 2221, 799 )
+shape = SubResource( 252 )

@@ -1,0 +1,25 @@
+{
+	"events": [
+		{
+			"character": "character-1682503063.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Today's special:"
+		},
+		{
+			"character": "character-1682503063.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Veg Fried Rice, Chicken Fried Rice, Chicken Biryani, Rumali Roti...."
+		},
+		{
+			"event_id": "dialogic_022",
+			"transition_duration": 1
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1682503045.json",
+		"name": "uncle"
+	}
+}

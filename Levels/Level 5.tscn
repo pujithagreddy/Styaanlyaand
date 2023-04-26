@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=2]
+[gd_scene load_steps=106 format=2]
 
 [ext_resource path="res://Assets/potted plants shadow + pillar shadow.png" type="Texture" id=1]
 [ext_resource path="res://Assets/object or char shadow.png" type="Texture" id=2]
@@ -27,6 +27,8 @@
 [ext_resource path="res://Assets/npc 3.png" type="Texture" id=25]
 [ext_resource path="res://Assets/npc 1.png" type="Texture" id=26]
 [ext_resource path="res://Assets/cat walkcycle (1).png" type="Texture" id=27]
+[ext_resource path="res://Levels/Uncle.gd" type="Script" id=28]
+[ext_resource path="res://Levels/Uncle 2.gd" type="Script" id=29]
 
 [sub_resource type="ConvexPolygonShape2D" id=41]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -2329,6 +2331,9 @@ animations = [ {
 "speed": 3.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=236]
+radius = 51.0
+
 [node name="Canteen" type="Node2D"]
 
 [node name="Ground" type="TileMap" parent="."]
@@ -2458,5 +2463,19 @@ attenuation = 0.450625
 position = Vector2( 769, 307 )
 scale = Vector2( 0.387083, 0.387083 )
 frames = SubResource( 206 )
-frame = 2
+frame = 3
 playing = true
+
+[node name="Uncle 1" type="Area2D" parent="."]
+script = ExtResource( 29 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Uncle 1"]
+position = Vector2( 590, 509 )
+shape = SubResource( 236 )
+
+[node name="Uncle 2" type="Area2D" parent="."]
+script = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Uncle 2"]
+position = Vector2( 1173, 460 )
+shape = SubResource( 236 )

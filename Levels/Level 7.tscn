@@ -1,4 +1,4 @@
-[gd_scene load_steps=157 format=2]
+[gd_scene load_steps=159 format=2]
 
 [ext_resource path="res://Levels/Gate.gd" type="Script" id=1]
 [ext_resource path="res://Stuff/Plant6.tscn" type="PackedScene" id=2]
@@ -48,6 +48,7 @@
 [ext_resource path="res://Assets/teacher2.png" type="Texture" id=46]
 [ext_resource path="res://Assets/npc 4.png" type="Texture" id=47]
 [ext_resource path="res://Assets/npc 2.png" type="Texture" id=48]
+[ext_resource path="res://Levels/cat area.gd" type="Script" id=49]
 
 [sub_resource type="TileSet" id=109]
 0/name = "all tiles 2.png 0"
@@ -2785,6 +2786,9 @@ animations = [ {
 1/shapes = [  ]
 1/z_index = 0
 
+[sub_resource type="CapsuleShape2D" id=251]
+radius = 45.0
+
 [node name="l1" type="Node2D"]
 
 [node name="Ground 1" type="TileMap" parent="."]
@@ -3264,7 +3268,6 @@ shape = SubResource( 207 )
 position = Vector2( -180, 1361 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 208 )
-frame = 1
 playing = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -3287,7 +3290,7 @@ frame = 1
 position = Vector2( 2221, 771 )
 scale = Vector2( 0.677083, 0.677084 )
 frames = SubResource( 217 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="cat back" type="AnimatedSprite" parent="."]
@@ -3335,7 +3338,6 @@ shape = SubResource( 207 )
 position = Vector2( -181, 1363 )
 scale = Vector2( 2.5, 2.5 )
 frames = SubResource( 250 )
-frame = 1
 playing = true
 
 [node name="npc3" type="Area2D" parent="."]
@@ -3380,3 +3382,17 @@ tile_set = SubResource( 114 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -327718, 1, 0, -327714, 0, 0, 327643, 0, 0, 262190, 536870913, 0, 393185, 0, 0, 917467, 1, 0 )
+
+[node name="cat area" type="Area2D" parent="."]
+script = ExtResource( 49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cat area"]
+position = Vector2( 584, -79 )
+shape = SubResource( 251 )
+
+[node name="cat area2" type="Area2D" parent="."]
+script = ExtResource( 49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cat area2"]
+position = Vector2( 2221, 799 )
+shape = SubResource( 251 )

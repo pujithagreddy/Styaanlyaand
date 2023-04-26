@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://Levels/Gate.gd" type="Script" id=1]
 [ext_resource path="res://Characters/MainPlayer.tscn" type="PackedScene" id=2]
@@ -27,6 +27,9 @@
 [ext_resource path="res://Assets/teacher2.png" type="Texture" id=25]
 [ext_resource path="res://Assets/npc 4.png" type="Texture" id=26]
 [ext_resource path="res://Assets/npc 2.png" type="Texture" id=27]
+[ext_resource path="res://Levels/Uncle.gd" type="Script" id=28]
+[ext_resource path="res://Levels/cat area.gd" type="Script" id=29]
+[ext_resource path="res://Levels/Uncle 2.gd" type="Script" id=30]
 
 [sub_resource type="ConvexPolygonShape2D" id=41]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -2329,6 +2332,13 @@ animations = [ {
 "speed": 3.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=207]
+radius = 45.0
+height = 0.0
+
+[sub_resource type="CapsuleShape2D" id=208]
+radius = 51.0
+
 [node name="Level 6" type="Node2D"]
 
 [node name="Ground3" type="TileMap" parent="."]
@@ -2458,5 +2468,26 @@ one_shot = true
 position = Vector2( 769, 307 )
 scale = Vector2( 0.387083, 0.387083 )
 frames = SubResource( 206 )
-frame = 2
+frame = 1
 playing = true
+
+[node name="cat area" type="Area2D" parent="."]
+script = ExtResource( 29 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cat area"]
+position = Vector2( 794, 315 )
+shape = SubResource( 207 )
+
+[node name="Uncle 1" type="Area2D" parent="."]
+script = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Uncle 1"]
+position = Vector2( 590, 509 )
+shape = SubResource( 208 )
+
+[node name="Uncle 2" type="Area2D" parent="."]
+script = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Uncle 2"]
+position = Vector2( 1173, 460 )
+shape = SubResource( 208 )

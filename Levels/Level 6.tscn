@@ -2334,7 +2334,6 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=207]
 radius = 45.0
-height = 0.0
 
 [sub_resource type="CapsuleShape2D" id=208]
 radius = 51.0
@@ -2452,6 +2451,21 @@ volume_db = 9.203
 autoplay = true
 attenuation = 0.450625
 
+[node name="cat back" type="AnimatedSprite" parent="."]
+position = Vector2( 769, 307 )
+scale = Vector2( 0.387083, 0.387083 )
+frames = SubResource( 206 )
+frame = 3
+playing = true
+
+[node name="cat area2" type="Area2D" parent="."]
+position = Vector2( -1423, -489 )
+script = ExtResource( 29 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cat area2"]
+position = Vector2( 2221, 799 )
+shape = SubResource( 207 )
+
 [node name="MainPlayer2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 997, -130 )
 scale = Vector2( 0.8, 0.8 )
@@ -2463,20 +2477,6 @@ pitch_scale = 0.16
 
 [node name="Timer" type="Timer" parent="MainPlayer2"]
 one_shot = true
-
-[node name="cat back" type="AnimatedSprite" parent="."]
-position = Vector2( 769, 307 )
-scale = Vector2( 0.387083, 0.387083 )
-frames = SubResource( 206 )
-frame = 1
-playing = true
-
-[node name="cat area" type="Area2D" parent="."]
-script = ExtResource( 29 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="cat area"]
-position = Vector2( 794, 315 )
-shape = SubResource( 207 )
 
 [node name="Uncle 1" type="Area2D" parent="."]
 script = ExtResource( 30 )

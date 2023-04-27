@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://Assets/potted plants shadow + pillar shadow.png" type="Texture" id=1]
 [ext_resource path="res://Assets/object or char shadow.png" type="Texture" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://Assets/cat walkcycle (1).png" type="Texture" id=27]
 [ext_resource path="res://Levels/Uncle.gd" type="Script" id=28]
 [ext_resource path="res://Levels/Uncle 2.gd" type="Script" id=29]
+[ext_resource path="res://Levels/cat area.gd" type="Script" id=30]
 
 [sub_resource type="ConvexPolygonShape2D" id=41]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -2334,6 +2335,9 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=236]
 radius = 51.0
 
+[sub_resource type="CapsuleShape2D" id=237]
+radius = 45.0
+
 [node name="Canteen" type="Node2D"]
 
 [node name="Ground" type="TileMap" parent="."]
@@ -2420,18 +2424,6 @@ cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( -393186, 43, 0, -393185, 24, 0, -393178, 23, 0, -393177, 22, 0, 131102, 29, 0, 131103, 45, 0, 131110, 46, 0, 131111, 20, 0, 655364, 55, 0, 655371, 56, 0, 655373, 55, 0, 655375, 54, 0, 655380, 55, 0, 655401, 53, 0, 720897, 16, 0, 720899, 18, 0, 720904, 57, 0, 720918, 57, 0, 786432, 58, 0, 786438, 58, 0, 786439, 3, 0, 786470, 47, 0, 851968, 4, 0, 851974, 0, 0, 851975, 2, 0, 851976, 1, 0, 851978, 52, 0, 851990, 4, 0, 851993, 19, 0, 852006, 42, 0, 917504, 4, 0, 917507, 50, 0, 917516, 51, 0, 917520, 44, 0, 983059, 49, 0, 983078, 42, 0, 1048615, 46, 0, 1114150, 42, 0, 1179658, 24, 0, 1179659, 25, 0, 1179668, 23, 0, 1179669, 40, 0, 1179678, 20, 0, 1179679, 29, 0, 1245222, 48, 0, 1245223, 41, 0, 1310761, 57, 0, 1376297, 58, 0, 1376298, 58, 0 )
 
-[node name="MainPlayer" parent="." instance=ExtResource( 12 )]
-position = Vector2( 176, 810 )
-scale = Vector2( 0.8, 0.8 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainPlayer"]
-stream = ExtResource( 16 )
-volume_db = -13.109
-pitch_scale = 0.16
-
-[node name="Timer" type="Timer" parent="MainPlayer"]
-one_shot = true
-
 [node name="towards area behind E-block" type="Area2D" parent="."]
 script = ExtResource( 13 )
 new_scene = "res://Levels/Level 8.tscn"
@@ -2479,3 +2471,23 @@ script = ExtResource( 28 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Uncle 2"]
 position = Vector2( 1173, 460 )
 shape = SubResource( 236 )
+
+[node name="cat area2" type="Area2D" parent="."]
+position = Vector2( -1423, -489 )
+script = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cat area2"]
+position = Vector2( 2221, 799 )
+shape = SubResource( 237 )
+
+[node name="MainPlayer" parent="." instance=ExtResource( 12 )]
+position = Vector2( 176, 810 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="MainPlayer"]
+stream = ExtResource( 16 )
+volume_db = -13.109
+pitch_scale = 0.16
+
+[node name="Timer" type="Timer" parent="MainPlayer"]
+one_shot = true

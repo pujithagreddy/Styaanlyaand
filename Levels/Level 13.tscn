@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://Assets/celianna_sciencelab.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Inside_A4.png" type="Texture" id=2]
@@ -23,6 +23,7 @@
 [ext_resource path="res://Assets/npc 2.png" type="Texture" id=21]
 [ext_resource path="res://Assets/npc 3.png" type="Texture" id=22]
 [ext_resource path="res://Assets/npc 1.png" type="Texture" id=23]
+[ext_resource path="res://Pixellari.ttf" type="DynamicFontData" id=24]
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1263,6 +1264,52 @@ points = PoolVector2Array( 29.6366, 35.5552, 10.3465, 35.5552, 10.3465, 9.83508,
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 107.75, 36 )
 
+[sub_resource type="DynamicFont" id=238]
+font_data = ExtResource( 24 )
+
+[sub_resource type="Animation" id=239]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 301, -50 ) ]
+}
+
+[sub_resource type="Animation" id=240]
+resource_name = "SHowNAmw"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 301, -50 ), Vector2( 301, -50 ), Vector2( 301, -50 ), Vector2( 301, -273 ) ]
+}
+
 [node name="Lab" type="Node2D"]
 
 [node name="Collision" type="TileMap" parent="."]
@@ -1341,3 +1388,22 @@ shape = SubResource( 8 )
 [node name="LAb" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 12 )
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 301.0
+margin_top = -50.0
+margin_right = 548.0
+margin_bottom = 50.0
+rect_scale = Vector2( 2, 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 238 )
+text = "LAB"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+autoplay = "SHowNAmw"
+anims/RESET = SubResource( 239 )
+anims/SHowNAmw = SubResource( 240 )
